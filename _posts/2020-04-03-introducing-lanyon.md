@@ -34,3 +34,16 @@ Using Java 8 API streams:
 ### After Java 9
 
     Set<String> set = Set.of("a", "b", "c");
+    
+This same feature is also there for List and Map.
+
+List example:
+
+    List<String> stringList = List.of("a","b","c");
+    
+Map example:
+
+    Map<String,Integer> stringMap = Map.of("a",1,"b",2,"c",3);
+
+where (a,1),(b,2),(c,3) are the key value pairs
+    
