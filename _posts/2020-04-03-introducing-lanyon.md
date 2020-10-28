@@ -15,7 +15,7 @@ If you want to create a small, unmodifiable collection(say, a set) involves cons
     set.add("c");
     set = Collections.unmodifiableSet(set);
 
-#### Other alternative appraches:
+#### Other alternative approaches:
 
 Using copy constructor from another collection:
 
@@ -52,7 +52,7 @@ where (a,1),(b,2),(c,3) are the key value pairs
 
 For List :
 
-| Method               | Description                                         |
+| Various `of` methods              | Description                                         |
 |----------------------|-----------------------------------------------------|
 | List.of()            | Creates an empty list                               |
 | List.of(e1)          | Creates a list with one elements                     |
@@ -63,7 +63,7 @@ For List :
 
 For Set :
 
-| Method               | Description                                         |
+| Various `of` methods               | Description                                         |
 |----------------------|-----------------------------------------------------|
 | Set.of()            | Creates an empty set                               |
 | Set.of(e1)          | Creates a set with one element                     |
@@ -74,10 +74,20 @@ For Set :
 
 For Map:
 
-| Method               | Description                                         |
+| Various `of` methods               | Description                                         |
 |----------------------|-----------------------------------------------------|
 | Map.of()            | Creates an empty map                               |
 | Map.of(k1,v1)          | Creates a map with one pair                     |
 | Map.of(k1,v1,k2,v2)       | Creates a map with two pairs                     |
 | ......               | Separate methods for creating map from 3 to 10 pairs |
 | Map.of(k1,v1,,..k10,v10) | Creates a map with 10 pairs                      |
+
+`Map.of` method does not support arbitrary number of elements. So if you want to create a map with more than 10 pairs then we have do something else.
+
+That is by creating a Map.entry instance.
+    import static java.util.Map.entry;
+    Map.entry(k,v)
+
+To create a Map with an arbitrary number of mappings,
+
+Map.ofEntries(entry(k1,v1), entry(k2,v2), ...)
