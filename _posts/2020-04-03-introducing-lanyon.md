@@ -85,9 +85,10 @@ For Map:
 `Map.of` method does not support arbitrary number of elements. So if you want to create a map with more than 10 pairs then we have do something else.
 
 That is by creating a Map.entry instance.
-    import static java.util.Map.entry;
-    Map.entry(k,v)
+
+      import static java.util.Map.entry;
+      Map.entry(k,v)
 
 To create a Map with an arbitrary number of mappings,
 
-Map.ofEntries(entry(k1,v1), entry(k2,v2), ...)
+      Map.ofEntries(entry(k1,v1), entry(k2,v2), ...)
