@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java 9 - Factory methods for Collections
+title: Java 9 - Factory method `of` in collection
 ---
 
 Java 9 Collection library introduced static factory methods for List, Set and Map interface.
@@ -92,3 +92,4 @@ That is by creating a Map.entry instance.
 To create a Map with an arbitrary number of mappings,
 
       Map.ofEntries(entry(k1,v1), entry(k2,v2), ...)
+      
